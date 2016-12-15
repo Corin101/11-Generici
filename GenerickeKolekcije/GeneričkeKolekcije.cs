@@ -9,14 +9,17 @@ namespace Vsite.CSharp
         public static void TipskiNesigurnaKolekcija()
         {
             ArrayList osobe = new ArrayList();
-            // TODO: U listu 'osobe' dodati dvije osobe s imenima "Ivica" i "Marica" te proizvoljnim datumima rođenja. Prevesti program, pokrenuti ga i provjeriti ispis.
-
+            //  U listu 'osobe' dodati dvije osobe s imenima "Ivica" i "Marica" te proizvoljnim datumima rođenja. Prevesti program, pokrenuti ga i provjeriti ispis.
+            Osoba ivica = new Osoba("Ivica", new DateTime(1872, 11, 2));
+            Osoba marica = new Osoba("Marica", new DateTime(1832, 3, 2));
+            osobe.Add(ivica);
+            osobe.Add(marica);
 
             foreach (Osoba osoba in osobe)
                 Console.WriteLine(osoba.Ime);
 
-            // TODO: U listu 'osobe' dodati objekt nekog drugog tipa. Prevesti program, pokrenuti ga i provjeriti ispis.
-
+            // U listu 'osobe' dodati objekt nekog drugog tipa. Prevesti program, pokrenuti ga i provjeriti ispis.
+            osobe.Add(3);
             foreach (Osoba osoba in osobe)
                 Console.WriteLine(osoba.Ime);
         }
@@ -24,10 +27,19 @@ namespace Vsite.CSharp
         public static void GeneričkaKolekcija()
         {
             List<Osoba> osobe = new List<Osoba>();
-            // TODO: Ponoviti dodavananja i ispise iz gornje metode. Prevesti program, pokrenuti ga i provjeriti ispis.
+            //  Ponoviti dodavananja i ispise iz gornje metode. Prevesti program, pokrenuti ga i provjeriti ispis.
+            Osoba ivica = new Osoba("Ivica", new DateTime(1872, 11, 2));
+            Osoba marica = new Osoba("Marica", new DateTime(1832, 3, 2));
+            osobe.Add(ivica);
+            osobe.Add(marica);
 
+            foreach (Osoba osoba in osobe)
+            Console.WriteLine(osoba.Ime);
+
+            //osobe.Add(3);
+            foreach (Osoba osoba in osobe)
+                Console.WriteLine(osoba.Ime);
         }
-
         static void Main(string[] args)
         {
             Console.WriteLine("TipskiNesigurnaKolekcija:");
